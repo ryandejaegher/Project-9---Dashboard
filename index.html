@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" />
+</head>
+
+<body>
+
+<nav class="col-12 main-header">
+	<a class="site-logo" href="/">
+		<img src="icons/icon-app.svg" alt="Your App">
+	</a>
+	<ul class="top-nav">
+		<li class="icon"><a href="#"><img src="icons/icon-bell.svg" alt="Notifications"></a></li>
+		<li><a href="#"><img class="user-image" src="icons/icon-member.jpg" alt="Member"></a></li>
+		<li><a href="#">Spaceman</a></li>
+	</ul>
+</nav>
+
+<nav class="col-1">
+	<ul class="sidebar-nav">
+		<li><a href="#"><img src="icons/icon-dashboard.svg" alt="Dashboard"></a></li>
+		<li><a href="#"><img src="icons/icon-members.svg" alt="Members"></a></li>
+		<li><a href="#"><img src="icons/icon-visits.svg" alt="Visits"></a></li>
+		<li><a href="#"><img src="icons/icon-settings.svg" alt="Settings"></a></li>
+	</ul>
+</nav>
+
+<div class="grid">
+	
+	<div class="col-12 dash-header">
+		<h1>Dashboard</h1>
+		<form class="search-bar">
+			<input type="text" placeholder="Search">
+		</form>
+	</div>
+	
+	<div id="alert" class="col-12">
+		Alert! Super fun danger is on the way. Watch out fool!<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+	</div>
+	
+  <div class="col-12">
+		<h2>Traffic</h2>
+		<canvas id="lineChart" width="400" height="200">Line</canvas>	
+		</div>
+	
+	<div class="col-6 mobile-col">
+		<h2>Daily Traffic</h2>	
+		<canvas id="barChart" width="400" height="200">Bar</canvas>
+	</div>
+	
+	<div class="col-6 mobile-col">
+		<h2>Mobile Users</h2>	
+		<canvas id="donutChart" width="400" height="200">Donut</canvas>
+	</div>
+	
+	<div class="col-12">
+		<h2>Social Stats</h2>
+		<div class="social-box">
+			<div class="col-4">
+				<div>
+					<img src="icons/icon-twitter.svg">
+				</div>
+				<ul>
+					<li>Twitter</li>
+					<li>10,345</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<div>
+					<img src="icons/icon-facebook.svg">
+				</div>
+				<ul>
+					<li>Facebook</li>
+					<li>8,739</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<div>
+					<img src="icons/icon-google-plus.svg">
+				</div>
+				<ul>
+					<li>Google+</li>
+					<li>2,530</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-6 new-members mobile-col">
+	<h2>New Members</h2>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member1.jpg" alt="Member 1">
+		  <ul>
+		  	<li>Mr. LED</li>
+		  	<li>led.glasses@example.com</li>
+		  </ul>
+		  <span>10/15/15</span>
+		</div>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member2.jpg" alt="Member 1">
+		  <ul>
+		  	<li>Mr. Sloth</li>
+		  	<li>lord.sloth@example.com</li>
+		  </ul>
+		  <span>10/15/15</span>
+		</div>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member3.jpg" alt="Member 1">
+		  <ul>
+		  	<li>Mr. Thumbs</li>
+		  	<li>happy.friend@example.com</li>
+		  </ul>
+		  <span>10/15/15</span>
+		</div>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member4.jpg" alt="Member 1">
+		  <ul>
+		  	<li>Mr. Straight Face</li>
+		  	<li>monsieur.man@example.com</li>
+		  </ul>
+		  <span>10/15/15</span>
+		</div>
+	</div>
+	
+	<div class="col-6 recent-activity mobile-col">
+	<h2>Recent Activity</h2>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member1.jpg" alt="Member 1">
+		  <ul>
+		  	<li>Mr. LED commented on YourApp's SEO Tips</li>
+		  	<li>4 hours ago</li>
+		  </ul>
+		  <span>></span>
+		</div>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member2.jpg" alt="Member 2">
+		  <ul>
+		  	<li>Mr. Sloth like the post Facebook's Changes for 2016</li>
+		  	<li>5 hours ago</li>
+		  </ul>
+		  <span>></span>
+		</div>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member3.jpg" alt="Member 3">
+		  <ul>
+		  	<li>Mr. Thumbs commented on Facebook's Changes for 2016</li>
+		  	<li>5 hours ago</li>
+		  </ul>
+		  <span>></span>
+		</div>
+		<div class="member-flex">
+		  <img class="member-image" src="icons/icon-member4.jpg" alt="Member 4">
+		  <ul>
+		  	<li>Mr. Straight Face posted YourApp's SEO tips</li>
+		  	<li>1 day ago</li>
+		  </ul>
+		  <span>></span>
+		</div>
+	</div>
+	
+	<div class="col-6 mobile-col">
+		<h2>Message User</h2>
+		<div class="message-user">
+		<form name="myForm" onsubmit="return validateForm()">
+		  <input type="text" name="fname" placeholder="Search for User">
+		  <textarea name="fmessage" placeholder="Message for User"></textarea>
+		<button id="form-button" onclick="myFunction()">SEND</button>
+		</form>	
+		<div id="snackbar">Message sent! Greatness achieved!</div>
+	</div>
+	</div>
+	<div class="col-6 mobile-col">
+		<h2>Settings</h2>	
+		
+ 	  	<div class="setting-flex">
+  	  		
+  	  		<span>Send Email Notifications</span>
+  	  		
+  	  		<label class="switch">
+  				<input type="checkbox">
+  				<div class="slider round"></div>
+			</label>
+		</div>
+		
+ 	  	<div class="setting-flex">
+  	  		
+  	  		<span>Send Profile to Public</span>
+  	  		
+  	  		<label class="switch">
+  				<input type="checkbox">
+  				<div class="slider round">
+  				</div>
+			</label>
+		</div>
+		
+		<select class="col-12">
+ 			<option value="" disabled selected>Select Timezone</option>
+  			<option value="CST">Central</option>
+  			<option value="MST">Mountain</option>
+  			<option value="EST">Eastern</option>
+  			<option value="PST">Pacific</option>
+		</select>
+		
+		<div class="button-flex">
+		<button class="col-6">Save</button>
+		<button class="col-6">Cancel</button>
+		</div>
+	</div>		
+</div>
+	
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/alert.js"></script>
+
+</html>
