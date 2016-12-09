@@ -9,7 +9,9 @@
 
 body {
 	font-family: arial;
-	color: rgba(151, 151, 151, 1)
+	color: rgba(151, 151, 151, 1);
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
 .grid > div {
@@ -35,6 +37,8 @@ body > nav:nth-of-type(1) {
 	position: fixed;
 	background-color: rgba(116, 119, 191, 1);
 	z-index: 2;
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
 body > nav:nth-of-type(2) {
@@ -434,7 +438,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  transform: translateX(30px);
 }
 
 /* Rounded sliders */
@@ -507,7 +511,7 @@ However, delay the fade out process for 2.5 seconds */
     from {bottom: 30px; opacity: 1;} 
     to {bottom: 0; opacity: 0;}
 }
-
+	
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
