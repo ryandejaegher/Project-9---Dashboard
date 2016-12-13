@@ -14,7 +14,7 @@
 		<img src="icons/icon-app.svg" alt="Your App">
 	</a>
 	<ul class="top-nav">
-		<li class="icon"><a href="#"><img src="icons/icon-bell.svg" alt="Notifications"></a></li>
+		<li class="icon"><a href="#"><img src="icons/icon-bell.svg" alt="Notifications"><span id ="badge" class="badge"></span></a></li>
 		<li><a href="#"><img class="user-image" src="icons/icon-member.jpg" alt="Member"></a></li>
 		<li><a href="#">Spaceman</a></li>
 	</ul>
@@ -39,13 +39,36 @@
 	</div>
 	
 	<div id="alert" class="col-12">
-		Alert! Super fun danger is on the way. Watch out fool!<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		Alert! Super fun danger is on the way. Watch out fool!<span class="closebtn" onclick="this.parentElement.style.display='none'; badgeRemove();">&times;</span>
 	</div>
 	
-  <div class="col-12">
+  	<div class="col-12">
+  		<div class="line-header">
 		<h2>Traffic</h2>
-		<canvas id="lineChart" width="400" height="200">Line</canvas>	
+			<div>
+				<button type="button" id="hourly-button" class="chart-button selected" onclick="showHourly()">Hourly</button>
+				<button type="button" id="daily-button" class="chart-button" onclick="showDaily()">Daily</button>
+				<button type="button" id="weekly-button" class="chart-button" onclick="showWeekly()">Weekly</button>
+				<button type="button" id="monthly-button" class="chart-button" onclick="showMonthly()">Monthly</button>
+			</div>
 		</div>
+		
+	<div class="charts">
+		<div id="hourly" class="show-chart">
+			<canvas id="lineHourly" width="400" height="200">Line Hourly</canvas>
+		</div>
+		<div id="daily" class="hide-chart">
+			<canvas id="lineDaily" width="400" height="200">Line Daily</canvas>
+		</div>
+		<div id="weekly" class="hide-chart">
+			<canvas id="lineWeekly" width="400" height="200">Line Weekly</canvas>
+		</div>
+		<div id="monthly" class="hide-chart">
+			<canvas id="lineMonthly" width="400" height="200">Line Monthly</canvas>
+		</div>
+	</div>
+			
+	</div>
 	
 	<div class="col-6 mobile-col">
 		<h2>Daily Traffic</h2>	
@@ -182,7 +205,7 @@
   	  		
   	  		<label class="switch">
   				<input type="checkbox">
-  				<div class="slider round"></div>
+  				<span class="slider round"></span>
 			</label>
 		</div>
 		
@@ -192,8 +215,8 @@
   	  		
   	  		<label class="switch">
   				<input type="checkbox">
-  				<div class="slider round">
-  				</div>
+  				<span class="slider round">
+  				</span>
 			</label>
 		</div>
 		

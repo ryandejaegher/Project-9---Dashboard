@@ -19,13 +19,6 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-		title: {
-/*            display: true,
-            text: 'Daily Traffic',
-			position: 'top',
-			fullWidth: true,
-			fontSize: 14*/
-        },
 		legend: {
 			display: false,
         responsive: true,
@@ -90,11 +83,11 @@ var myDoughnutChart = new Chart(dtx, {
 
 /*Line Chart*/
 
-var ltx = document.getElementById("lineChart");
+var ltx = document.getElementById("lineHourly");
 var myLineChart = new Chart(ltx, {
     type: 'line',
     data: {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    labels: ["12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm"],
     datasets: [{
             label: "Hourly",
             fill: true,
@@ -116,77 +109,13 @@ var myLineChart = new Chart(ltx, {
             pointHitRadius: 10,
             data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2000],
             spanGaps: false,
-        },
-		{
-            label: "Daily",
-            fill: true,
-            lineTension: 0,
-            backgroundColor: "rgba(226, 227, 246, 0.4)",
-            borderColor: "rgba(190, 191, 236, 1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(190, 191, 236, 1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 10,
-            pointHoverBackgroundColor: "rgba(115, 119, 190, 0.8)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 4,
-            pointRadius: 5,
-            pointHitRadius: 10,
-            data: [650, 1350, 1100, 1300, 1800, 1700, 1450, 1150, 1450, 2350, 1450, 1000],
-            spanGaps: false,
-        },
-		{
-            label: "Weekly",
-            fill: true,
-            lineTension: 0,
-            backgroundColor: "rgba(226, 227, 246, 0.4)",
-            borderColor: "rgba(190, 191, 236, 1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(190, 191, 236, 1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 10,
-            pointHoverBackgroundColor: "rgba(115, 119, 190, 0.8)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 4,
-            pointRadius: 5,
-            pointHitRadius: 10,
-            data: [450, 1250, 1000, 1200, 2000, 1900, 1750, 1350, 1750, 2050, 1750, 1500],
-            spanGaps: false,
-        },
-		{
-            label: "Monthly",
-            fill: true,
-            lineTension: 0,
-            backgroundColor: "rgba(226, 227, 246, 0.4)",
-            borderColor: "rgba(190, 191, 236, 1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(190, 191, 236, 1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 10,
-            pointHoverBackgroundColor: "rgba(115, 119, 190, 0.8)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 4,
-            pointRadius: 5,
-            pointHitRadius: 10,
-            data: [250, 1250, 1200, 1500, 1100, 1500, 1950, 1250, 1450, 2250, 1550, 2300],
-            spanGaps: false,
         }]
 
     },
     options: {
         responsive: true,
+		legend: {
+			display: false,
 		maintainAspectRatio: true,	
         scales: {
             yAxes: [{
@@ -197,4 +126,143 @@ var myLineChart = new Chart(ltx, {
             }]
         }
     }
+}
+});
+
+var ltx = document.getElementById("lineDaily");
+var myLineChart = new Chart(ltx, {
+    type: 'line',
+    data: {
+    labels: ["01/01", "01/02", "01/03", "01/04", "01/05", "01/06", "01/07", "01/08"],
+    datasets: [{
+            label: "Hourly",
+            fill: true,
+            lineTension: 0,
+            backgroundColor: "rgba(226, 227, 246, 0.4)",
+            borderColor: "rgba(190, 191, 236, 1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(190, 191, 236, 1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: "rgba(115, 119, 190, 0.8)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 4,
+            pointRadius: 5,
+            pointHitRadius: 10,
+            data: [750, 1250, 1500, 1800, 1000, 1300, 1450, 1250],
+            spanGaps: false,
+        }]
+
+    },
+    options: {
+        responsive: true,
+		legend: {
+			display: false,
+		maintainAspectRatio: true,	
+        scales: {
+            yAxes: [{
+                ticks: {
+					maxTicksLimit: 5,
+                    beginAtZero: true,
+                }
+            }]
+        }
+    }
+}
+});
+
+var ltx = document.getElementById("lineWeekly");
+var myLineChart = new Chart(ltx, {
+    type: 'line',
+    data: {
+    labels: ["1-7", "8-15", "16-23", "24 - 31"],
+    datasets: [{
+            label: "Hourly",
+            fill: true,
+            lineTension: 0,
+            backgroundColor: "rgba(226, 227, 246, 0.4)",
+            borderColor: "rgba(190, 191, 236, 1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(190, 191, 236, 1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: "rgba(115, 119, 190, 0.8)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 4,
+            pointRadius: 5,
+            pointHitRadius: 10,
+            data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2000],
+            spanGaps: false,
+        }]
+
+    },
+    options: {
+        responsive: true,
+		legend: {
+			display: false,
+		maintainAspectRatio: true,	
+        scales: {
+            yAxes: [{
+                ticks: {
+					maxTicksLimit: 5,
+                    beginAtZero: true,
+                }
+            }]
+        }
+    }
+}
+});
+
+var ltx = document.getElementById("lineMonthly");
+var myLineChart = new Chart(ltx, {
+    type: 'line',
+    data: {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [{
+            label: "Hourly",
+            fill: true,
+            lineTension: 0,
+            backgroundColor: "rgba(226, 227, 246, 0.4)",
+            borderColor: "rgba(190, 191, 236, 1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(190, 191, 236, 1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 10,
+            pointHoverBackgroundColor: "rgba(115, 119, 190, 0.8)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 4,
+            pointRadius: 5,
+            pointHitRadius: 10,
+            data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2000],
+            spanGaps: false,
+        }]
+
+    },
+    options: {
+        responsive: true,
+		legend: {
+			display: false,
+		maintainAspectRatio: true,	
+        scales: {
+            yAxes: [{
+                ticks: {
+					maxTicksLimit: 5,
+                    beginAtZero: true,
+                }
+            }]
+        }
+    }
+}
 });
