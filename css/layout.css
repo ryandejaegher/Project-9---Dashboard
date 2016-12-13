@@ -366,6 +366,11 @@ select {
 	margin-left: auto;
 }
 
+.member-flex img:nth-of-type(2) {
+	width: 25px;
+	margin-left: auto;
+}
+
 .setting-flex > label {
 	padding-left: 20px;
 }
